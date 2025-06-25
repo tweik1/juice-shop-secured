@@ -1,0 +1,15 @@
+name: Secure CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Hello from GitHub Actions
+        run: echo "✅ Ура, CI работает!"
